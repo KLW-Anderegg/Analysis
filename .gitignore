@@ -11,6 +11,11 @@
 *.cb
 *.cb2
 .*.lb
+*.synctex.gz
+
+# macOS
+.DS_Store
+
 
 ## Intermediate documents:
 *.dvi
