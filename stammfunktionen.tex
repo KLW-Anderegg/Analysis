@@ -1,0 +1,149 @@
+\section{Integralrechnung}
+\subsection{Stammfunktionen und unbestimmtes Integral}
+\begin{LA}
+	{Momentane Position}{}
+	Wir denken uns ein Massband, das entlang der 100-Meter-Bahn der KS Im Lee ausgelegt ist. Die Position $s=0$ befindet sich an der Startlinie, die Position $s=100$ an der Ziellinie.
+
+	Alice programmiert einen Roboter so, dass seine Position $s(t)$ in Metern zu jeder Zeit $t$ in Sekunden durch die Funktion
+	$$s_A (t) = t^2 + 5$$
+	beschrieben wird.
+
+	\begin{enumerate}
+		\item Wo auf der Bahn wird der Roboter von Alice zum Zeitpunkt $t=0$ positioniert?
+		\item Bestimmen Sie die momentante Geschwindigkeit $v_A (t)$ des Roboters von Alice.
+		\item Was ändert sich an den Funktionen $s_A (t)$ und $v_A (t)$, wenn Alice den Roboter zum Zeitpunkt $t=0$ an der Startlinie losfahren lässt?
+	\end{enumerate}
+
+	Auch Bob testet einen Roboter. Dieser wird auf die Bahn gesetzt und beschleunigt schnell in Richtung Ziellinie. Während der Fahrt wird der Roboter immer schneller. Seine momentane Geschwindigkeit $v_B(t)$ in Meter pro Sekunde ist durch die Funktion
+	$$v_B(t) = \frac{1}{2} t^2 + t$$
+	gegeben, wobei $t$ die Zeit in Sekunden seit dem Start angibt.
+
+	\begin{enumerate}
+		\item Bestimmen Sie die Funktion $s_B(t)$, welche die momentane Position des Roboters in Metern angibt. Gehen Sie davon aus, dass der Roboter zum Zeitpunkt $t=0$ an der Startlinie steht, also $s_B(0)=0$ gilt.
+		\item Wie lautet die Funktion $s_B(t)$, wenn der Roboter zum Zeitpunkt $t=0$ bereits 5 Meter von der Startlinie entfernt ist, also $s_B(0)=5$ gilt?
+	\end{enumerate}
+
+\end{LA}
+
+
+\clearpage
+\begin{definition}
+	{Stammfunktion}{}
+	Sei $f$ eine auf einem Intervall $\DD$ definierte Funktion. Eine Funktion $F$ heisst Stammfunktion von $f$, wenn für alle $x \in \DD$ gilt
+	$$F'(x) = f(x)$$
+
+\end{definition}
+
+\begin{bsp}
+	{Stammfunktionen von $\sin(x)$}{}
+	$f(x) = \sin(x)$
+
+	\vspace*{5cm}
+\end{bsp}
+
+\begin{definition}
+	{Unbestimmtes Integral}{}
+	Sei $f$ eine auf einem Intervall $\DD$ definierte Funktion. Das unbestimmte Integral von $f$ ist die Menge aller Stammfunktionen von $f$ und wird mit
+	$$\int f(x) \, dx$$
+	bezeichnet.
+
+	Wenn $F$ eine Stammfunktion von $f$ ist, so wird das unbestimmte Integral so angegeben:
+	$$\int f(x) \, dx = F(x) + C$$
+	wobei $C \in \R$ eine Konstante ist.
+\end{definition}
+
+Das Suchen nach einer Stammfunktion wird als \textit{Integrieren} oder \textit{Antidifferentieren} bezeichnet. Das Integrieren ist also die Umkehrung des Ableitens – genauso wie das Wurzelziehen die Umkehrung des Quadrierens ist.
+
+\begin{bsp}
+	{Unbestimmte Integrale}{}
+
+	\begin{itemize}
+		\item $\int x^2 \, dx = $
+
+		      \vspace*{1cm}
+
+		\item $\int \left( \cos(x) + \frac{1}{x^2}\right) \, dx = $
+
+		      \vspace*{1cm}
+
+	\end{itemize}
+
+
+\end{bsp}
+
+\clearpage
+
+\begin{satz}
+	{Erste Integrationsregeln}{}
+	\begin{enumerate}
+		\item Potenzregeln: für $n \neq -1$ gilt:
+		      $$ \int x^n \, dx = \frac{x^{n+1}}{n+1} + C $$
+		\item Summenregel:
+		      $$ \int (f(x) + g(x)) \, dx = \int f(x) \, dx + \int g(x) \, dx $$
+		\item Faktorregel: Für einen konstanten Faktor $k$ gilt:
+		      $$ \int k \cdot f(x) \, dx = k \cdot \int f(x) \, dx $$
+	\end{enumerate}
+\end{satz}
+
+Diese Regeln sind eine direkte Folge der entsprechenden Ableitungsregeln.
+
+\begin{ueb}
+	{}{}
+	Tipp: Das Bestimmen der Integrale geschieht häufig durch Versuch und Irrtum. Man überlegt sich einen möglichen Kandidaten für die Stammfunktion und leitet diesen ab, um zu überprüfen, ob man die gegebene Funktion erhält. Falls nicht, hat man häufig eine Idee gewonnen, wie man den Kandidaten anpassen muss.
+
+
+	\begin{enumerate}
+		\item Bestimmen Sie die folgenden unbestimmten Integrale:
+		      \begin{enumerate}
+			      \item $\int 7 \, dx$
+			      \item $\int x^5 \, dx$
+			      \item $\int (2x^{-3} -4x^3) \, dx$
+			      \item $\int \sqrt{x} \, dx$
+			      \item $\int (x-3) \cdot \sqrt{x} \, dx$
+		      \end{enumerate}
+		\item Bestimmen Sie die folgenden unbestimmten Integrale mit etwas schwierigeren Funktionen:
+		      \begin{enumerate}
+			      \item $\int \cos(x) \, dx$
+			      \item $\int e^x \, dx$
+			      \item $\int \frac{1}{x} \, dx \quad , x>0$
+			      \item $\int \sin(2x) \, dx$
+			      \item $\int \sqrt{3-x} \, dx$
+		      \end{enumerate}
+		\item Finden Sie eine Funktion $f$ sodass gilt:
+		      \begin{enumerate}
+			      \item $\int f(x) \, dx = x^2+5x+C$
+			      \item $\int f(x) \, dx = x\cdot e^x + C$
+			      \item $\int f(x) \, dx = 2 \cos^2(x) +C$
+			      \item $\int f(x) \, dx = \frac{x^2}{3x+1} + C$
+		      \end{enumerate}
+	\end{enumerate}
+
+
+\end{ueb}
+\clearpage
+\emph{Lösungen}
+\begin{enumerate}
+	\item  Integrale bestimmen:
+	      \begin{enumerate}
+		      \item $7x + C$
+		      \item $\frac{1}{6} x^6 + C$
+		      \item $-x^{-2} - x^4 + C$
+		      \item $\frac{2}{3} x^{3/2} + C$
+		      \item $ (x-3) \cdot \sqrt{x} = x^{3/2} - 3x^{1/2} \Rightarrow \int (x-3) \cdot \sqrt{x} \, dx = \frac{2}{5} x^{5/2} - 2 x^{3/2} + C$
+	      \end{enumerate}
+	\item Integrale bestimmen (schwierigere Funktionen):
+	      \begin{enumerate}
+		      \item $\sin(x) + C$
+		      \item $e^x + C$
+		      \item $\ln(x) + C$
+		      \item $-\frac{1}{2} \cos(2x) + C$ (Der Vorfaktor eliminiert den Faktor 2, der durch die Kettenregel beim Ableiten entsteht.)
+		      \item $-\frac{2}{3} (3-x)^{3/2} + C$ (Der Vorfaktor eliminiert den Faktor $-1$, der durch die Kettenregel beim Ableiten entsteht.)
+	      \end{enumerate}
+	\item Die Funktion rechts ist jeweils die Stammfunktion von $f$. Also muss $f$ die Ableitung der Funktion rechts sein.
+	      \begin{enumerate}
+		      \item $f(x) = 2x + 5$
+		      \item $f(x) = e^x + x \cdot e^x$ (Produktregel)
+		      \item $f(x) = -4 \cos(x) \cdot \sin(x)$ (Kettenregel)
+		      \item $f(x) = \frac{3x^2+2x}{(3x+1)^2}$ (Quotientenregel)
+	      \end{enumerate}
+\end{enumerate}
